@@ -1,0 +1,493 @@
+/* ========================================= */
+/* GLOBAL SETTINGS */
+/* ========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #222;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+header {
+
+    background-color: #17202a;
+
+    color: white;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+}
+
+
+.header-content {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+}
+
+
+header h2 {
+
+    margin: 10px 0;
+
+    font-size: 26px;
+
+    font-weight: normal;
+
+}
+
+
+header p {
+
+    margin-top: 15px;
+
+    font-size: 16px;
+
+}
+
+
+/* ========================================= */
+/* EXPAND / COLLAPSE BUTTON AREA */
+/* ========================================= */
+
+.expand-control {
+
+    max-width: 1000px;
+
+    margin: 20px auto 0;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+.expand-control button {
+
+    border: none;
+
+    background-color: #17202a;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+
+.expand-control button:hover {
+
+    background-color: #34495e;
+
+}
+
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    padding: 0 20px;
+
+}
+
+
+/* ========================================= */
+/* RESUME SECTIONS */
+/* ========================================= */
+
+.resume-section {
+
+    background-color: white;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+}
+
+
+/* ========================================= */
+/* DETAILS */
+/* ========================================= */
+
+details {
+
+    width: 100%;
+
+}
+
+
+summary {
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    background-color: #eef2f5;
+
+    list-style-position: inside;
+
+}
+
+
+summary:hover {
+
+    background-color: #e2e8ed;
+
+}
+
+
+/* ========================================= */
+/* CONTENT */
+/* ========================================= */
+
+.section-content {
+
+    padding: 20px;
+
+}
+
+
+.section-content p {
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ========================================= */
+/* NESTED DETAILS */
+/* ========================================= */
+
+.section-content details {
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+}
+
+
+.section-content details summary {
+
+    background-color: #f8f9fa;
+
+    font-size: 17px;
+
+    padding: 14px 16px;
+
+}
+
+
+.section-content details summary:hover {
+
+    background-color: #edf1f4;
+
+}
+
+
+/* ========================================= */
+/* LISTS */
+/* ========================================= */
+
+ul {
+
+    padding-left: 25px;
+
+}
+
+
+li {
+
+    margin-bottom: 9px;
+
+}
+
+
+/* ========================================= */
+/* PROJECT */
+/* ========================================= */
+
+.project {
+
+    padding: 18px;
+
+}
+
+
+.project h3 {
+
+    margin-top: 0;
+
+    color: #17202a;
+
+}
+
+
+.project h4 {
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+
+    color: #34495e;
+
+}
+
+
+/* ========================================= */
+/* TECHNOLOGY TAGS */
+/* ========================================= */
+
+.technology-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+}
+
+
+.technology-list span {
+
+    background-color: #e8f0fe;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    border: 1px solid #d5e2f5;
+
+}
+
+
+/* ========================================= */
+/* CERTIFICATIONS */
+/* ========================================= */
+
+.certification-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.certificate {
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    background-color: #fafafa;
+
+}
+
+
+.certificate h3 {
+
+    min-height: 55px;
+
+    font-size: 17px;
+
+}
+
+
+.certificate img {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+
+}
+
+
+.certificate img:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    background-color: #17202a;
+
+    color: white;
+
+    margin-top: 40px;
+
+}
+
+
+footer p {
+
+    margin: 5px;
+
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 700px) {
+
+
+    header {
+
+        padding: 40px 15px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    main {
+
+        padding: 0 12px;
+
+    }
+
+
+    .expand-control {
+
+        padding: 0 12px;
+
+    }
+
+
+    .expand-control button {
+
+        font-size: 12px;
+
+        padding: 8px 12px;
+
+    }
+
+
+    .certification-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .certificate h3 {
+
+        min-height: auto;
+
+    }
+
+
+}
