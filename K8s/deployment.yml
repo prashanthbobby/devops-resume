@@ -1,1 +1,20 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume2026
+  namespace: pns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resume
+  template:
+    metadata:
+      labels:
+        app: resume
+    spec:
+      containers:
+        - name: resume1c
+          image: prashanth1316/resume2026:IMAGE_TAG  #IMAGE_TAG:- Jenkins will replace that with the Jenkins build number.
+          ports:
+            - containerPort: 80
