@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'k8s-agent'
+    }
 
     environment {
         IMAGE_NAME = 'prashanth1316/resume2026'
@@ -24,11 +26,25 @@ pipeline {
             }
         }
 
-        stage('Docker Push') {
+        stage('Docker Login & Push') {
             steps {
-                sh '''
-                    docker push ${IMAGE_NAME}:${IMAGE_TAG}
-                '''
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )
+                ]) {
+                    sh '''
+                        echo "$DOCKER_PASSWORD" | docker login \
+                        -u "$DOCKER_USERNAME" \
+                        --password-stdin
+
+                        docker push ${IMAGE_NAME}:${IMAGE_TAG}
+
+                        docker logout
+                    '''
+                }
             }
         }
 
