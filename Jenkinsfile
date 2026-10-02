@@ -52,10 +52,10 @@ pipeline {
             steps {
                 sh '''
                     sed "s/IMAGE_TAG/${IMAGE_TAG}/g" \
-                    k8s/deployment.yml > /tmp/deployment.yml
+                    K8s/deployment.yml > /tmp/deployment.yml
 
                     kubectl apply -f /tmp/deployment.yml
-                    kubectl apply -f k8s/service.yml
+                    kubectl apply -f K8s/service.yml
                 '''
             }
         }
